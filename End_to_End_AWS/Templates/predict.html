@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{{ url_for('predict') }}" method="post">
+
+        <label for="Temperature">Temperature</label>
+        <input type="text" name="Temperature" id="Temperature" placeholder="Enter Temperature">
+        <br><br>
+
+        <label for="RH">Relative Humidity</label>
+        <input type="text" name="RH" id="RH" placeholder="Enter Relative Humidity">
+        <br><br>
+
+        <label for="Ws">Wind Speed</label>
+        <input type="text" name="Ws" id="Ws" placeholder="Enter Wind Speed">
+        <br><br>    
+
+        <label for="Rain">Rain</label>  
+        <input type="text" name="Rain" id="Rain" placeholder="Enter Rain">
+        <br><br>
+
+        <label for="FFMC">FFMC</label>
+        <input type="text" name="FFMC" id="FFMC" placeholder="Enter FFMC">
+        <br><br>    
+
+        <label for="DMC">DMC</label>
+        <input type="text" name="DMC" id="DMC" placeholder="Enter DMC"> 
+        <br><br>    
+
+        
+        <label for="ISI">ISI</label>    
+        <input type="text" name="ISI" id="ISI" placeholder="Enter ISI">
+        <br><br>
+
+        <label for="Classes">Classes</label>    
+        <input type="text" name="Classes" id="Classes" placeholder="Enter Classes">
+        <br><br>
+
+        <label for="Region">Region</label>    
+        <input type="text" name="Region" id="Region" placeholder="Enter Region">
+        <br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+        <h2>Result:{{ prediction }}</h2>
+</body>
+</html>
